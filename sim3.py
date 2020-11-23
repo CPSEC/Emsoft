@@ -114,7 +114,7 @@ class dc:
         self.total = 24
         self.slot = int(self.total / Ts)
         self.t_arr = linspace(0, self.total, self.slot + 1)
-        self.ref = [math.pi / 2] * 71 + [-math.pi / 2] * 50
+        self.ref = [math.pi / 2] * 71 + [math.pi / 2] * 50
         self.thres = 0.2
         self.drift = 0.01
         self.x_0 = [0]
@@ -129,7 +129,7 @@ class dc:
         self.maxc = 20
         self.xmeasure = [[0], [0], [0]]
         self.xreal = [[0], [0], [0]]
-        self.safeset = {'lo': [-4, -1000, -1000], 'up': [4, 1000, 1000]}
+        self.safeset = {'lo': [-4, -1000000000, -100000000], 'up': [4, 1000000000, 100000000]}
 
 
 class ap:
@@ -245,4 +245,4 @@ class qd:
         self.maxc = 50
         self.xmeasure = [[0], [0], [0],[0], [0], [0],[0], [0], [0]]
         self.xreal = [[0], [0], [0],[0], [0], [0],[0], [0], [0]]
-        self.safeset = {'lo': [-100] * 8 + [-1], 'up': [100] * 8 + [8]}
+        self.safeset = {'lo': [-10000] * 8 + [-1], 'up': [10000] * 8 + [8]}
